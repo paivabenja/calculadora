@@ -1,0 +1,32 @@
+.container {
+  display: grid;
+  width: 25%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+#inputText {
+  grid-column: 1/ 5;
+  padding: 14px;
+  border: 1px solid black;
+}
+
+#btn0 {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+#btnIgual {
+  grid-row: 4/6;
+  grid-column: 4;
+}
+
+#btnSumar {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+#btnRestar {
+  grid-row: 3;
+  grid-column: 4;
+}
