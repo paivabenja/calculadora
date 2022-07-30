@@ -15,6 +15,10 @@ const changeInputValue = (value) => {
   inputText.value = value;
 };
 
+const changeInputPlaceholder = (placeholder) => {
+  inputText.placeholder = placeholder;
+};
+
 const calcular = (texto) => {
   if (selectedOperation == null) return;
   if (texto == "") return;
@@ -36,6 +40,7 @@ const calcular = (texto) => {
       break;
   }
   selectedOperation = null;
+  changeInputPlaceholder("Alla la calculean");
 };
 
 const operar = (texto, operacion) => {
@@ -43,6 +48,7 @@ const operar = (texto, operacion) => {
   if (selectedOperation != null) return;
   number1 = parseInt(texto);
   changeInputValue("");
+  changeInputPlaceholder(number1);
   selectedOperation = operacion;
 };
 
